@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>tlife mockup</title>
+  <link rel="stylesheet" href="css/t.css" media="all">
+</head>
+<body>
+  <div id="container">
+
+  </div>
+
+  <script type="text/template" id="task-template">
+    <div class="task cf">
+      <span class="cnt"><%- text %></span>
+      <div class="duration">
+        <time class="start"><%- start %></time>
+        <time class="end"><%- end %></time>
+      </div>
+    </div>
+    <div class="edit cf">
+      <input name="cnt" type="text">
+      <div class="duration">
+        <input class="start" name="start" type="text" title="HH:mm">
+        <input class="end" name="end" type="text" title="HH:mm">
+      </div>
+    </div>
+    <span class="remove">-</span>
+  </script>
+
+  <script type="text/template" id="daily-template">
+    <h2>
+    <time><%- date %></time>
+    </h2>
+    <ul class="tasks">
+      <li class="add">+</li>
+      <li class="task-inputs">
+        <input name="cnt" type="text">
+        <div class="duration">
+          <input class="start" name="start" type="text" title="HH:mm">
+          <input class="end" name="end" type="text" title="HH:mm">
+        </div>
+      </li>
+    </ul>
+  </script>
+
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/backbone/backbone.js"></script>
+  <script src="bower_components/backbone.localstorage/backbone.localStorage.js"></script>
+  <script src="js/models/task.js"></script>
+  <script src="js/collections/tasks.js"></script>
+  <script src="js/views/task-view.js"></script>
+  <script src="js/views/daily-view.js"></script>
+  <script src="js/views/app-view.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
